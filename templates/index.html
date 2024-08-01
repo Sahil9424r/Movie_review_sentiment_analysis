@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Email Spam/Ham Classification</title>
+    <title>Movie Review Sentiment Analysis</title>
 </head>
 <body>
-    <h1>Email Spam/Ham Classification</h1>
+    <h1>Movie Review Sentiment Analysis</h1>
     <form action="/classify" method="post">
-        <label for="text">Email Text:</label><br>
+        <label for="text">Review Text:</label><br>
         <textarea id="text" name="text" rows="10" cols="50">{{ text if text else '' }}</textarea><br><br>
         <input type="submit" value="Classify">
     </form>
 
     {% if prediction_text %}
         <h2>Classification Result</h2>
-        <p><strong>Email Text:</strong></p>
+        <p><strong>Review Text:</strong></p>
         <p>{{ text }}</p>
         <p><strong>{{ prediction_text }}</strong></p>
     {% endif %}
